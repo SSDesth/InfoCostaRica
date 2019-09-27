@@ -3,37 +3,82 @@
 var arbolDatos = [
   {
     "name": "Costa Rica",
-     "cant":"54184",
+     "cant":"5048263",
     "parent": "null",
     "children": [
       {
-        "name": "Level 2: A",
+        "name": "Población de 15 años y más",
         "parent": "Top Level",
-        "cant":"20000",
+        "cant":"3936704",
         "children": [
           {
-            "name": "Son of A",
-            "cant":"10000",
-            "parent": "Level 2: A"
+            "name": "Ocupada",
+            "cant":"2183195",
+            "parent": "Población de 15 años y más",
+            "children": [
+              {
+                "name": "De 15 a 24 años",
+              "cant":"235994",
+              "parent": "Ocupada"
+              },
+              {
+                "name": "De 25 a 34 años",
+              "cant":"555429",
+              "parent": "Ocupada"
+              },
+              {
+                "name": "De 35 a 44 años",
+              "cant":"508361",
+              "parent": "Ocupada"
+              },
+              {
+                "name": "De 45 a 59 años",
+              "cant":"658805",
+              "parent": "Ocupada"
+              },
+              {
+                "name": "De 60 años o más",
+              "cant":"223561",
+              "parent": "Ocupada"
+              },
+              {
+                "name": "No especificado",
+              "cant":"1045",
+              "parent": "Ocupada"
+              }
+            ]
           },          {
-            "name": "Son of A",
-            "cant":"7000",
-            "parent": "Level 2: A"
-          },
-          {
-            "name": "Daughter of A",
-            "cant":"3000",
-            "parent": "Level 2: A"
+            "name": "Desempleada",
+            "cant":"295580",
+            "parent": "Población de 15 años y más",
+             "children": [
+             {
+              "name": "Con experiencia",
+              "cant":"256102",
+              "parent": "Desempleada"
+              },{
+              "name": "Por razones del mercado",
+              "cant":"193675",
+              "parent": "Desempleada"
+              },{
+              "name": "Por razones personales",
+              "cant":"62427",
+              "parent": "Desempleada"
+              },
+              {
+              "name": "Sin experiencia",
+              "cant":"39478",
+              "parent": "Desempleada"
+              }
+
+             
+             ]
           }
         ]
       },
       {
-        "name": "Level 2: B",
-        "cant":"10000",
-        "parent": "Top Level"
-      },      {
-        "name": "Level 2: B",
-        "cant":"24184",
+        "name": "Poblacion menor de 15",
+        "cant":"1111559",
         "parent": "Top Level"
       }
     ]
@@ -125,7 +170,7 @@ function update(source) {
 	  .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
   nodeUpdate.select("circle")
-	  .attr("r", function(d) { return ((d.cant*100)/55000)/2.5})
+	  .attr("r", function(d) { return ((d.cant*100)/5048263)/2.5})
 	  .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
   nodeUpdate.select("text")
