@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Arbol</title>
+
+    <link rel="stylesheet" type="text/css" href="arbol.css">
+
+    <style>
+	
+	.node {
+		cursor: pointer;
+	}
+
+	.node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+	}
+
+	.node text {
+    fill: #555;
+	  font: 12px sans-serif;
+	}
+
+	.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+	}
+	
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="mostrarInfo">
+
+      <strong style='color:white'>Nombre: </strong>
+      <label id="infoNombre" class="mostradorInfo"></label><br>
+
+      <strong style='color:white'>Cantidad: </strong>
+      <label id="infoCant" class="mostradorInfo"></label><br>
+
+  </div>
+
+  <!-- load the d3.js library -->	
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+
+  <!-- Link Js de Arbol -->
+  <script src="arbol.js"></script>
+	<!-- Link Js de Arbol -->
+  <script src="d3-tip.js"></script>
+
+</body>
+</html>

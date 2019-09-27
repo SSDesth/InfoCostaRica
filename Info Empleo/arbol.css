@@ -1,0 +1,13 @@
+#mostrarInfo{
+    width: 175px;
+    height: 75px;
+    position: absolute;
+    top: -500px;
+    border: 1px solid gray;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.mostradorInfo{
+    color: rgb(255,0,0);
+
+}
